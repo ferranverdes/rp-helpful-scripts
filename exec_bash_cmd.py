@@ -4,13 +4,9 @@ import argparse
 import subprocess
 import shlex
 
-parser = argparse.ArgumentParser(description="Python module to execute simple bash commands.")
-parser.add_argument("cmd", help="Commands to be executed")
-args = parser.parse_args()
-
 def exec_bash_cmd(cmd_parts, prev_process=None):
     """
-	Executes non-complex bash commands.
+    Executes non-complex bash commands.
 
     Parameters
     -----------
@@ -51,4 +47,8 @@ def exec_bash_cmd(cmd_parts, prev_process=None):
         return stdout
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Python module to execute simple bash commands.")
+    parser.add_argument("cmd", help="Commands to be executed")
+    args = parser.parse_args()
+
     print(exec_bash_cmd(args.cmd), end='')
