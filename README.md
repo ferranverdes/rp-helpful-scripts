@@ -1,1 +1,2 @@
-# rp-python-scripting-helpers
+# rp-helpful-scripts
+
